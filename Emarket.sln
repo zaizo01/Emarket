@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{A7DA860E-6986-44D3-BD73-BBC3CAC396D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{39D80CC6-136B-4325-B630-7B887235FA5B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructure", "Infraestructure", "{F4D03F04-8E61-44AD-B92F-454F5B7B79AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{357AF480-8574-421D-BCB4-2A6BB07F89B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emarket.Core.Application", "Emarket.Core.Application\Emarket.Core.Application.csproj", "{B2C3670B-758E-4019-A921-C32B18D9A25E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emarket.Core.Domain", "Emarket.Core.Domain\Emarket.Core.Domain.csproj", "{7265EC23-36F1-4BDC-B103-7372C1470CFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emarket.Infrastucture.Persistence", "Emarket.Infrastucture.Persistence\Emarket.Infrastucture.Persistence.csproj", "{A4F54BF1-F472-477A-BCE8-6B9D82DDFD86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp", "WebApp", "{5A9FC4EC-2B8D-4FA0-B356-7E1A525937BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmarketWebApp", "EmarketWebApp\EmarketWebApp.csproj", "{601E1D58-881F-4CD5-BE7B-2CD9803CB5B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2C3670B-758E-4019-A921-C32B18D9A25E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2C3670B-758E-4019-A921-C32B18D9A25E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2C3670B-758E-4019-A921-C32B18D9A25E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2C3670B-758E-4019-A921-C32B18D9A25E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7265EC23-36F1-4BDC-B103-7372C1470CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7265EC23-36F1-4BDC-B103-7372C1470CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7265EC23-36F1-4BDC-B103-7372C1470CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7265EC23-36F1-4BDC-B103-7372C1470CFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4F54BF1-F472-477A-BCE8-6B9D82DDFD86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4F54BF1-F472-477A-BCE8-6B9D82DDFD86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4F54BF1-F472-477A-BCE8-6B9D82DDFD86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4F54BF1-F472-477A-BCE8-6B9D82DDFD86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{601E1D58-881F-4CD5-BE7B-2CD9803CB5B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{601E1D58-881F-4CD5-BE7B-2CD9803CB5B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{601E1D58-881F-4CD5-BE7B-2CD9803CB5B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{601E1D58-881F-4CD5-BE7B-2CD9803CB5B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{39D80CC6-136B-4325-B630-7B887235FA5B} = {A7DA860E-6986-44D3-BD73-BBC3CAC396D3}
+		{F4D03F04-8E61-44AD-B92F-454F5B7B79AD} = {A7DA860E-6986-44D3-BD73-BBC3CAC396D3}
+		{357AF480-8574-421D-BCB4-2A6BB07F89B4} = {A7DA860E-6986-44D3-BD73-BBC3CAC396D3}
+		{B2C3670B-758E-4019-A921-C32B18D9A25E} = {39D80CC6-136B-4325-B630-7B887235FA5B}
+		{7265EC23-36F1-4BDC-B103-7372C1470CFB} = {39D80CC6-136B-4325-B630-7B887235FA5B}
+		{A4F54BF1-F472-477A-BCE8-6B9D82DDFD86} = {F4D03F04-8E61-44AD-B92F-454F5B7B79AD}
+		{5A9FC4EC-2B8D-4FA0-B356-7E1A525937BB} = {357AF480-8574-421D-BCB4-2A6BB07F89B4}
+		{601E1D58-881F-4CD5-BE7B-2CD9803CB5B9} = {5A9FC4EC-2B8D-4FA0-B356-7E1A525937BB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC437403-7D7C-43D5-8B92-27DFA21B351D}
+	EndGlobalSection
+EndGlobal
