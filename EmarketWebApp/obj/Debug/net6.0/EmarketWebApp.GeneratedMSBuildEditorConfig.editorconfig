@@ -8,37 +8,61 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EmarketWebApp
 build_property.RootNamespace = EmarketWebApp
-build_property.ProjectDir = C:\Users\zaiz\Desktop\node js\Emarket\EmarketWebApp\
+build_property.ProjectDir = C:\Users\czaiz\Desktop\Projects\Me\Emarket\EmarketWebApp\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\zaiz\Desktop\node js\Emarket\EmarketWebApp
+build_property.MSBuildProjectDirectory = C:\Users\czaiz\Desktop\Projects\Me\Emarket\EmarketWebApp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/zaiz/Desktop/node js/Emarket/EmarketWebApp/Views/Home/Index.cshtml]
+[C:/Users/czaiz/Desktop/Projects/Me/Emarket/EmarketWebApp/Views/Announcement/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5ub3VuY2VtZW50XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/czaiz/Desktop/Projects/Me/Emarket/EmarketWebApp/Views/Announcement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5ub3VuY2VtZW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/czaiz/Desktop/Projects/Me/Emarket/EmarketWebApp/Views/Announcement/SaveAnnouncement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5ub3VuY2VtZW50XFNhdmVBbm5vdW5jZW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/czaiz/Desktop/Projects/Me/Emarket/EmarketWebApp/Views/Category/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/czaiz/Desktop/Projects/Me/Emarket/EmarketWebApp/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/czaiz/Desktop/Projects/Me/Emarket/EmarketWebApp/Views/Category/SaveCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcU2F2ZUNhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/czaiz/Desktop/Projects/Me/Emarket/EmarketWebApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/zaiz/Desktop/node js/Emarket/EmarketWebApp/Views/Home/Privacy.cshtml]
+[C:/Users/czaiz/Desktop/Projects/Me/Emarket/EmarketWebApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/zaiz/Desktop/node js/Emarket/EmarketWebApp/Views/Shared/Error.cshtml]
+[C:/Users/czaiz/Desktop/Projects/Me/Emarket/EmarketWebApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/zaiz/Desktop/node js/Emarket/EmarketWebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/czaiz/Desktop/Projects/Me/Emarket/EmarketWebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/zaiz/Desktop/node js/Emarket/EmarketWebApp/Views/_ViewImports.cshtml]
+[C:/Users/czaiz/Desktop/Projects/Me/Emarket/EmarketWebApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/zaiz/Desktop/node js/Emarket/EmarketWebApp/Views/_ViewStart.cshtml]
+[C:/Users/czaiz/Desktop/Projects/Me/Emarket/EmarketWebApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/zaiz/Desktop/node js/Emarket/EmarketWebApp/Views/Shared/_Layout.cshtml]
+[C:/Users/czaiz/Desktop/Projects/Me/Emarket/EmarketWebApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-uz3scpcuq9

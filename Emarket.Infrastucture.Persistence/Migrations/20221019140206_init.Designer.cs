@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Emarket.Infrastucture.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221019040936_init")]
+    [Migration("20221019140206_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

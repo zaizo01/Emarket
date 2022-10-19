@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "upJNkEoRZgFH8PrRjhTnfhc2u7B2ZxFgjPNEv7UPXbq1qkpm3jOAbvhNzpYFwUNmVwF4ZSIXnnG+JN1Mpheumg==",
+  "dgSpecHash": "5VTxV6oO8OVcZyIXyKqVjD3ViHpsLP3RNWKfTYgfrSqrJUl6o12CE2PE8NuXgcUTVcmLI7teQqlsAORYeWmRLg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Core.Application\\Emarket.Core.Application.csproj",
+  "projectFilePath": "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Core.Application\\Emarket.Core.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\zaiz\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\zaiz\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\zaiz\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
-    "C:\\Users\\zaiz\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\czaiz\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\czaiz\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\czaiz\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\czaiz\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\czaiz\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512",
+    "C:\\Users\\czaiz\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

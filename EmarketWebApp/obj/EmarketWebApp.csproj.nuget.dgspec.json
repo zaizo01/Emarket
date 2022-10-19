@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\EmarketWebApp\\EmarketWebApp.csproj": {}
+    "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\EmarketWebApp\\EmarketWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Core.Application\\Emarket.Core.Application.csproj": {
+    "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Core.Application\\Emarket.Core.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Core.Application\\Emarket.Core.Application.csproj",
+        "projectUniqueName": "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Core.Application\\Emarket.Core.Application.csproj",
         "projectName": "Emarket.Core.Application",
-        "projectPath": "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Core.Application\\Emarket.Core.Application.csproj",
-        "packagesPath": "C:\\Users\\zaiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Core.Application\\obj\\",
+        "projectPath": "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Core.Application\\Emarket.Core.Application.csproj",
+        "packagesPath": "C:\\Users\\czaiz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Core.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\zaiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\czaiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Core.Domain\\Emarket.Core.Domain.csproj": {
-                "projectPath": "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Core.Domain\\Emarket.Core.Domain.csproj"
+              "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Core.Domain\\Emarket.Core.Domain.csproj": {
+                "projectPath": "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Core.Domain\\Emarket.Core.Domain.csproj"
               }
             }
           }
@@ -48,6 +44,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -72,25 +72,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Core.Domain\\Emarket.Core.Domain.csproj": {
+    "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Core.Domain\\Emarket.Core.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Core.Domain\\Emarket.Core.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Core.Domain\\Emarket.Core.Domain.csproj",
         "projectName": "Emarket.Core.Domain",
-        "projectPath": "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Core.Domain\\Emarket.Core.Domain.csproj",
-        "packagesPath": "C:\\Users\\zaiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Core.Domain\\obj\\",
+        "projectPath": "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Core.Domain\\Emarket.Core.Domain.csproj",
+        "packagesPath": "C:\\Users\\czaiz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Core.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\zaiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\czaiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -130,25 +126,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Infrastucture.Persistence\\Emarket.Infrastucture.Persistence.csproj": {
+    "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Infrastucture.Persistence\\Emarket.Infrastucture.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Infrastucture.Persistence\\Emarket.Infrastucture.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Infrastucture.Persistence\\Emarket.Infrastucture.Persistence.csproj",
         "projectName": "Emarket.Infrastucture.Persistence",
-        "projectPath": "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Infrastucture.Persistence\\Emarket.Infrastucture.Persistence.csproj",
-        "packagesPath": "C:\\Users\\zaiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Infrastucture.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Infrastucture.Persistence\\Emarket.Infrastucture.Persistence.csproj",
+        "packagesPath": "C:\\Users\\czaiz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Infrastucture.Persistence\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\zaiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\czaiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -162,11 +154,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Core.Application\\Emarket.Core.Application.csproj": {
-                "projectPath": "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Core.Application\\Emarket.Core.Application.csproj"
+              "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Core.Application\\Emarket.Core.Application.csproj": {
+                "projectPath": "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Core.Application\\Emarket.Core.Application.csproj"
               },
-              "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Core.Domain\\Emarket.Core.Domain.csproj": {
-                "projectPath": "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Core.Domain\\Emarket.Core.Domain.csproj"
+              "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Core.Domain\\Emarket.Core.Domain.csproj": {
+                "projectPath": "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Core.Domain\\Emarket.Core.Domain.csproj"
               }
             }
           }
@@ -211,25 +203,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\EmarketWebApp\\EmarketWebApp.csproj": {
+    "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\EmarketWebApp\\EmarketWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\EmarketWebApp\\EmarketWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\EmarketWebApp\\EmarketWebApp.csproj",
         "projectName": "EmarketWebApp",
-        "projectPath": "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\EmarketWebApp\\EmarketWebApp.csproj",
-        "packagesPath": "C:\\Users\\zaiz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\EmarketWebApp\\obj\\",
+        "projectPath": "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\EmarketWebApp\\EmarketWebApp.csproj",
+        "packagesPath": "C:\\Users\\czaiz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\EmarketWebApp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\zaiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\czaiz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -243,14 +231,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Core.Application\\Emarket.Core.Application.csproj": {
-                "projectPath": "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Core.Application\\Emarket.Core.Application.csproj"
+              "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Core.Application\\Emarket.Core.Application.csproj": {
+                "projectPath": "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Core.Application\\Emarket.Core.Application.csproj"
               },
-              "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Core.Domain\\Emarket.Core.Domain.csproj": {
-                "projectPath": "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Core.Domain\\Emarket.Core.Domain.csproj"
+              "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Core.Domain\\Emarket.Core.Domain.csproj": {
+                "projectPath": "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Core.Domain\\Emarket.Core.Domain.csproj"
               },
-              "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Infrastucture.Persistence\\Emarket.Infrastucture.Persistence.csproj": {
-                "projectPath": "C:\\Users\\zaiz\\Desktop\\node js\\Emarket\\Emarket.Infrastucture.Persistence\\Emarket.Infrastucture.Persistence.csproj"
+              "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Infrastucture.Persistence\\Emarket.Infrastucture.Persistence.csproj": {
+                "projectPath": "C:\\Users\\czaiz\\Desktop\\Projects\\Me\\Emarket\\Emarket.Infrastucture.Persistence\\Emarket.Infrastucture.Persistence.csproj"
               }
             }
           }
@@ -290,7 +278,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

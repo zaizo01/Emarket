@@ -12,7 +12,7 @@ namespace Emarket.Core.Application.Interfaces.Services
     {
         Task Update(SaveViewModel vm);
 
-        Task Add(SaveViewModel vm);
+        Task<SaveViewModel> Add(SaveViewModel vm);
 
         Task Delete(int id);
 

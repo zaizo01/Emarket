@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Emarket.Core.Application.Interfaces.Services
 {
-    internal interface IAnnouncementService: IGenericService<SaveAnnouncementViewModel, AnnouncementViewModel>
+    public interface IAnnouncementService: IGenericService<SaveAnnouncementViewModel, AnnouncementViewModel>
     {
     }
 }

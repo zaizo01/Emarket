@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Emarket.Core.Application.Interfaces.Services
 {
-    internal interface ICategoryService: IGenericService<SaveCategoryViewModel, CategoryViewModel>
+    public interface ICategoryService: IGenericService<SaveCategoryViewModel, CategoryViewModel>
     {
     }
 }

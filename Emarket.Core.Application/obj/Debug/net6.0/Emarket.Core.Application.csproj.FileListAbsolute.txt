@@ -13,3 +13,18 @@ C:\Users\zaiz\Desktop\node js\Emarket\Emarket.Core.Application\obj\Debug\net6.0\
 C:\Users\zaiz\Desktop\node js\Emarket\Emarket.Core.Application\obj\Debug\net6.0\refint\Emarket.Core.Application.dll
 C:\Users\zaiz\Desktop\node js\Emarket\Emarket.Core.Application\obj\Debug\net6.0\Emarket.Core.Application.pdb
 C:\Users\zaiz\Desktop\node js\Emarket\Emarket.Core.Application\obj\Debug\net6.0\ref\Emarket.Core.Application.dll
+C:\Users\czaiz\Desktop\Projects\Me\Emarket\Emarket.Core.Application\bin\Debug\net6.0\Emarket.Core.Application.deps.json
+C:\Users\czaiz\Desktop\Projects\Me\Emarket\Emarket.Core.Application\bin\Debug\net6.0\Emarket.Core.Application.dll
+C:\Users\czaiz\Desktop\Projects\Me\Emarket\Emarket.Core.Application\bin\Debug\net6.0\Emarket.Core.Application.pdb
+C:\Users\czaiz\Desktop\Projects\Me\Emarket\Emarket.Core.Application\bin\Debug\net6.0\Emarket.Core.Domain.dll
+C:\Users\czaiz\Desktop\Projects\Me\Emarket\Emarket.Core.Application\bin\Debug\net6.0\Emarket.Core.Domain.pdb
+C:\Users\czaiz\Desktop\Projects\Me\Emarket\Emarket.Core.Application\obj\Debug\net6.0\Emarket.Core.Application.csproj.AssemblyReference.cache
+C:\Users\czaiz\Desktop\Projects\Me\Emarket\Emarket.Core.Application\obj\Debug\net6.0\Emarket.Core.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\czaiz\Desktop\Projects\Me\Emarket\Emarket.Core.Application\obj\Debug\net6.0\Emarket.Core.Application.AssemblyInfoInputs.cache
+C:\Users\czaiz\Desktop\Projects\Me\Emarket\Emarket.Core.Application\obj\Debug\net6.0\Emarket.Core.Application.AssemblyInfo.cs
+C:\Users\czaiz\Desktop\Projects\Me\Emarket\Emarket.Core.Application\obj\Debug\net6.0\Emarket.Core.Application.csproj.CoreCompileInputs.cache
+C:\Users\czaiz\Desktop\Projects\Me\Emarket\Emarket.Core.Application\obj\Debug\net6.0\Emarket.Core.Application.csproj.CopyComplete
+C:\Users\czaiz\Desktop\Projects\Me\Emarket\Emarket.Core.Application\obj\Debug\net6.0\Emarket.Core.Application.dll
+C:\Users\czaiz\Desktop\Projects\Me\Emarket\Emarket.Core.Application\obj\Debug\net6.0\refint\Emarket.Core.Application.dll
+C:\Users\czaiz\Desktop\Projects\Me\Emarket\Emarket.Core.Application\obj\Debug\net6.0\Emarket.Core.Application.pdb
+C:\Users\czaiz\Desktop\Projects\Me\Emarket\Emarket.Core.Application\obj\Debug\net6.0\ref\Emarket.Core.Application.dll

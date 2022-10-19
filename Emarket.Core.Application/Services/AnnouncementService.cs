@@ -18,7 +18,7 @@ namespace Emarket.Core.Application.Services
             _announcementRepository = announcementRepository;
         }
 
-        public async Task Add(SaveAnnouncementViewModel vm)
+        public async Task<SaveAnnouncementViewModel> Add(SaveAnnouncementViewModel vm)
         {
             Announcement announcement = new();
             announcement.Name = vm.Name;
@@ -28,6 +28,16 @@ namespace Emarket.Core.Application.Services
             announcement.CategoryId = vm.CategoryId;
 
             await _announcementRepository.AddAsync(announcement);
+
+            SaveAnnouncementViewModel announcementVm = new();
+            announcementVm.Id = announcement.Id;
+            announcementVm.Name = announcement.Name;
+            announcementVm.Price = announcement.Price;
+            announcementVm.ImageUrl = announcement.ImageUrl;
+            announcementVm.Description = announcement.Description;
+            announcementVm.CategoryId = announcement.CategoryId;
+
+            return announcementVm;
         }
 
         public async Task Delete(int id)

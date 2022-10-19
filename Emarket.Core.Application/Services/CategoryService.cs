@@ -18,13 +18,21 @@ namespace Emarket.Core.Application.Services
             _categoryRepository = categoryRepository;
         }
 
-        public async Task Add(SaveCategoryViewModel vm)
+        public async Task<SaveCategoryViewModel> Add(SaveCategoryViewModel vm)
         {
             Category category = new();
             category.Name = vm.Name;
             category.Description = vm.Description;
 
-            await _categoryRepository.AddAsync(category);
+            category = await _categoryRepository.AddAsync(category);
+
+            SaveCategoryViewModel categoryVm = new();
+
+            categoryVm.Id = category.Id;
+            categoryVm.Name = category.Name;
+            categoryVm.Description = category.Description;
+
+            return categoryVm;
         }
 
         public async Task Delete(int id)
@@ -35,7 +43,7 @@ namespace Emarket.Core.Application.Services
 
         public async Task<List<CategoryViewModel>> GetAllViewModel()
         {
-            var categoryList = await _categoryRepository.GetAllWithIncludeAsync(new List<string> { "Products" });
+            var categoryList = await _categoryRepository.GetAllWithIncludeAsync(new List<string> { "Announcements" });
 
             return categoryList.Select(category => new CategoryViewModel
             {

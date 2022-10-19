@@ -10,4 +10,5 @@ namespace Emarket.Core.Application.Interfaces.Repositories
     public interface IAnnouncementRepository : IGenericRepositoryAsync<Announcement>
     {
     }
+   
 }
