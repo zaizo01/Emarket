@@ -1,24 +1,69 @@
 ﻿@using Emarket.Core.Application.ViewModels.Announcements;
-@model List<AnnouncementViewModel>
+@model MainAnnouncement
 @{
     ViewData["Title"] = "Announcements";
 }
 
-<div class="container-fluid">
+<div class="container justify-content-center">
+
+    <div class="row">
+        <div class="col-4">
+            <div class="card my-2" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Filtro por categoria</h5>
+                    @foreach (var item in Model.Categories)
+                    {
+        
+                       <div class="form-check">
+                        <label>
+                            <input type="checkbox" name="@item.Name" value="@item.Id"  class="form-check-input messageCheckbox"  />
+                            <span>@item.Name</span>
+                        </label>
+                      </div>
+                    }
+              </div>
+              <button class="btn btn-primary mt-4" onclick="filterByCategory()">Buscar</button>
+            </div>
+        </div>
+        <div class="col-8" style="margin-top:30px;">
+
+             @using (Html.BeginForm())
+        {
+            <div class="w-100 d-flex">
+                @Html.TextBox("SearchString", 
+                    null,
+                    new { 
+                        id = "SearchString", 
+                        @class = "form-control" 
+                })
+
+                @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                    {
+                        <input type="submit" value="Buscar" onclick="filterByCategory()" class="btn btn-primary mx-2" />
+                    }
+
+                
+            
+            </div>
+        }
+        </div>
+    </div>
+
+
 
     <div class="row">
         <h2>Listado de Anuncios</h2>
         <br />
-        @if (Model == null || Model.Count == 0)
+        @if (Model == null || Model.Announcements.Count == 0)
         {
-            <h2>No hay anuncios</h2>
+            <h4>No hay anuncios</h4>
         }
         else
         {
-            @foreach (AnnouncementViewModel item in Model)
+            @foreach (var item in Model.Announcements)
             {
                
-                    <div class="col-4" onclick="getAnnouncementDetails(@item.Id)">
+                    <div class="col-3 m-2" onclick="getAnnouncementDetails(@item.Id)">
                         <div class="card shadow-sm">
                             <div class="text-center">
                                 <img class="bd-placeholder-img card-img-top img-product-size" src="@item.ImageUrl" style="width:200px;height:200px;" />
@@ -31,6 +76,7 @@
                                     <small class="fs-6"><span class="fw-bold">Precio:</span> $@item.Price</small>
                                     <small class="fs-6"><span class="fw-bold">Categoria:</span> @item.CategoryName</small>
                                 </div>
+                                <a asp-controller="Home" asp-action="Details" asp-route-id="@item.Id"  class="btn btn-primary mt-4">Detalles</a>
                             </div>
                         </div>
                     </div>
@@ -42,10 +88,37 @@
 </div>
 
 <script>
-    function getAnnouncementDetails(id){
-        fetch('https://localhost:7053/Home/GetDetails/' + id)
-          .then((response) => response.json())
-          .then((data) => console.log(data));
 
-    }
+
+function filterByCategory() {
+    $(document).ready(function(){
+
+    var searchIDs = $('.messageCheckbox:checked').map(function(){
+
+      return $(this).val();
+
+    });
+
+    let search = $("#SearchString").val();
+    let array = searchIDs.get();
+
+    const data = { searchString: search, categories:  array};
+
+    fetch('https://localhost:7053/Home/Index?searchString='+search+'&categories='+array, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Success:', data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+
+});
+}
 </script>
+

@@ -9,5 +9,6 @@ namespace Emarket.Core.Application.Interfaces.Services
 {
     public interface IAnnouncementService: IGenericService<SaveAnnouncementViewModel, AnnouncementViewModel>
     {
+        Task<List<AnnouncementViewModel>> GetAllViewModelHome(string? searchString, string[] categories);
     }
 }

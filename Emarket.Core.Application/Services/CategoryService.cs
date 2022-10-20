@@ -1,7 +1,9 @@
-﻿using Emarket.Core.Application.Interfaces.Repositories;
+﻿using Dapper;
+using Emarket.Core.Application.Interfaces.Repositories;
 using Emarket.Core.Application.Interfaces.Services;
 using Emarket.Core.Application.ViewModels.Categories;
 using Emarket.Core.Domain.Entities;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,15 +45,31 @@ namespace Emarket.Core.Application.Services
 
         public async Task<List<CategoryViewModel>> GetAllViewModel()
         {
-            var categoryList = await _categoryRepository.GetAllWithIncludeAsync(new List<string> { "Announcements" });
+            var cs = "Server=.;Database=DBEmarket;Trusted_Connection=true;MultipleActiveResultSets=True";
+            using var con = new SqlConnection(cs);
+            con.Open();
 
-            return categoryList.Select(category => new CategoryViewModel
+            var query = @"SELECT Categories.Name,Categories.Description,Categories.Id, COUNT(U.Id) CountAnuncios,count(distinct UserId) as countUser
+                            FROM Categories
+                            left join Announcements on Categories.Id = Announcements.CategoryId
+                            left join Users U       ON U.Id = Announcements.UserId
+                            group by Categories.Name,Categories.Description,Categories.Id";
+
+            var categories  = await con.QueryAsync<QueryCategory>(query);
+
+            List<CategoryViewModel> CategoryViewModels = new List<CategoryViewModel>();
+
+            foreach (var item in categories)
             {
-                Name = category.Name,
-                Description = category.Description,
-                Id = category.Id,
-                AnnouncementQuantity = category.Announcements.Count()
-            }).ToList();
+                CategoryViewModels.Add(new CategoryViewModel {
+                    Id = item.Id,
+                    Name = item.Name, 
+                    AnnouncementQuantity = item.CountAnuncios,
+                    UserQuantity = item.countUser, 
+                    Description =  item.Description });
+            }
+
+            return CategoryViewModels;
         }
 
         public async Task<SaveCategoryViewModel> GetByIdSaveViewModel(int id)

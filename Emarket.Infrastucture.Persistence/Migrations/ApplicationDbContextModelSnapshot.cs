@@ -59,7 +59,7 @@ namespace Emarket.Infrastucture.Persistence.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
-                    b.Property<int?>("UserId")
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -160,11 +160,15 @@ namespace Emarket.Infrastucture.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Emarket.Core.Domain.Entities.User", null)
+                    b.HasOne("Emarket.Core.Domain.Entities.User", "User")
                         .WithMany("Announcements")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Category");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Emarket.Core.Domain.Entities.Category", b =>

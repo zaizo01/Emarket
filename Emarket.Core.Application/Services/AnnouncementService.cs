@@ -65,8 +65,69 @@ namespace Emarket.Core.Application.Services
                 ImageUrl = announcement.ImageUrl,
                 CategoryName = announcement.Category.Name,
                 CategoryId = announcement.Category.Id,
-                UserId= announcement.UserId
-            }).ToList();
+                UserId = announcement.UserId
+            }).Where(x => x.UserId == userViewModel.Id).ToList();
+        }
+
+        public async Task<List<AnnouncementViewModel>> GetAllViewModelHome(string searchString  = "", string[] categories = null)
+        {
+            searchString += "";
+            searchString = searchString.ToLower();
+
+            var announcementList = await _announcementRepository.GetAllWithIncludeAsync(new List<string> { "Category" });
+
+            
+            
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                var de = announcementList.Select(announcement => new AnnouncementViewModel
+                {
+                    Name = announcement.Name,
+                    Description = announcement.Description,
+                    Id = announcement.Id,
+                    Price = announcement.Price,
+                    ImageUrl = announcement.ImageUrl,
+                    CategoryName = announcement.Category.Name,
+                    CategoryId = announcement.Category.Id,
+                    UserId = announcement.UserId
+                }).Where(x => x.UserId != userViewModel.Id && x.Name.ToLower().Contains(searchString));
+
+                if (categories.Length != 0)
+                {
+                    List<AnnouncementViewModel> list = new();
+
+                    foreach (var catrgoryId in categories)
+                    {
+                        list.AddRange(announcementList.Select(announcement => new AnnouncementViewModel
+                        {
+                            Name = announcement.Name,
+                            Description = announcement.Description,
+                            Id = announcement.Id,
+                            Price = announcement.Price,
+                            ImageUrl = announcement.ImageUrl,
+                            CategoryName = announcement.Category.Name,
+                            CategoryId = announcement.Category.Id,
+                            UserId = announcement.UserId
+                        }).Where(x => x.UserId != userViewModel.Id && x.CategoryId.Equals(Convert.ToInt32(catrgoryId))).ToList());
+                    }
+
+                    return list;
+                }
+
+                return de.ToList();
+            }
+
+            return announcementList.Select(announcement => new AnnouncementViewModel
+            {
+                Name = announcement.Name,
+                Description = announcement.Description,
+                Id = announcement.Id,
+                Price = announcement.Price,
+                ImageUrl = announcement.ImageUrl,
+                CategoryName = announcement.Category.Name,
+                CategoryId = announcement.Category.Id,
+                UserId = announcement.UserId
+            }).Where(x => x.UserId != userViewModel.Id ).ToList();
         }
 
         public async Task<SaveAnnouncementViewModel> GetByIdSaveViewModel(int id)

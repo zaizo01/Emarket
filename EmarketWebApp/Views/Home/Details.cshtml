@@ -1,5 +1,5 @@
 ﻿@using Emarket.Core.Application.ViewModels.Announcements;
-@model SaveAnnouncementViewModel
+@model AnnouncementeDetails
 @{
     ViewData["Title"] = "Details";
 }
@@ -17,33 +17,60 @@
                <div>
                     <hr />
                     <dl class="row">
-                        <dt class = "col-sm-2">
-                            Nombre
+                        <img src="@Model.ImageUrl"/>
+                        <dt class = "col-sm-6">
+                            Nombre:
                         </dt>
                         <dd class = "col-sm-10">
                             @Html.DisplayFor(model => model.Name)
                         </dd>
-                        <dt class = "col-sm-2">
-                            Precio
+                        <dt class = "col-sm-6">
+                            Precio: 
                         </dt>
                         <dd class = "col-sm-10">
-                            @Html.DisplayFor(model => model.Price)
+                            $@Html.DisplayFor(model => model.Price)
                         </dd>
-                         <dt class = "col-sm-2">
-                            Descripción
+                         <dt class = "col-sm-6">
+                            Descripción:
                         </dt>
                         <dd class = "col-sm-10">
                             @Html.DisplayFor(model => model.Description)
                         </dd>
-                         <dt class = "col-sm-2">
-                            Categoría 
+                         <dt class = "col-sm-6">
+                            Categoría: 
                         </dt>
-                       
+                        <dd class = "col-sm-10">
+                            @Html.DisplayFor(model => model.CategoryName)
+                        </dd>
+                          <dt class = "col-sm-6">
+                            Fecha en que se publicó el anuncio: 
+                        </dt>
+                        <dd class = "col-sm-10">
+                            @Html.DisplayFor(model => model.AnnouncementCreateDate)
+                        </dd>
+                          <dt class = "col-sm-6">
+                            Nombre del anunciante: 
+                        </dt>
+                        <dd class = "col-sm-10">
+                            @Html.DisplayFor(model => model.AnnouncementName)
+                        </dd>
+                          <dt class = "col-sm-6">
+                             Correo del anunciante: 
+                        </dt>
+                        <dd class = "col-sm-10">
+                            @Html.DisplayFor(model => model.AnnouncementEmail)
+                        </dd>
+                          <dt class = "col-sm-6">
+                            Teléfono del anunciante: 
+                        </dt>
+                        <dd class = "col-sm-10">
+                            @Html.DisplayFor(model => model.AnnouncementPhone)
+                        </dd>
                     </dl>
                 </div>
 
                 </div>
-
+                <a asp-controller="Home" asp-action="Index"  class="btn btn-warning">Volver atras</a>
             </div>
         </div>
     </div>
