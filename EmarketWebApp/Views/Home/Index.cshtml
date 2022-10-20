@@ -1,8 +1,51 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using Emarket.Core.Application.ViewModels.Announcements;
+@model List<AnnouncementViewModel>
+@{
+    ViewData["Title"] = "Announcements";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container-fluid">
+
+    <div class="row">
+        <h2>Listado de Anuncios</h2>
+        <br />
+        @if (Model == null || Model.Count == 0)
+        {
+            <h2>No hay anuncios</h2>
+        }
+        else
+        {
+            @foreach (AnnouncementViewModel item in Model)
+            {
+               
+                    <div class="col-4" onclick="getAnnouncementDetails(@item.Id)">
+                        <div class="card shadow-sm">
+                            <div class="text-center">
+                                <img class="bd-placeholder-img card-img-top img-product-size" src="@item.ImageUrl" style="width:200px;height:200px;" />
+                            </div>
+
+                            <div class="card-body">
+                                <h4 class="card-title">@item.Name</h4>
+                                <p class="card-text">@item.Description</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="fs-6"><span class="fw-bold">Precio:</span> $@item.Price</small>
+                                    <small class="fs-6"><span class="fw-bold">Categoria:</span> @item.CategoryName</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+            }
+        }
+    </div>
+
 </div>
+
+<script>
+    function getAnnouncementDetails(id){
+        fetch('https://localhost:7053/Home/GetDetails/' + id)
+          .then((response) => response.json())
+          .then((data) => console.log(data));
+
+    }
+</script>

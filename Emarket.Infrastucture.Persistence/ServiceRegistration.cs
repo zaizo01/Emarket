@@ -1,4 +1,5 @@
 ﻿using Emarket.Core.Application.Interfaces.Repositories;
+using Emarket.Infrastructure.Persistence.Repository;
 using Emarket.Infrastucture.Persistence.Contexts;
 using Emarket.Infrastucture.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +25,7 @@ namespace Emarket.Infrastucture.Persistence
             services.AddTransient(typeof(GenericRepository<>), typeof(GenericRepository<>));
             services.AddTransient<IAnnouncementRepository, AnnouncementRepository>();
             services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
         }
     }
 }

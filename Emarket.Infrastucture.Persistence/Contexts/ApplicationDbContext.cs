@@ -14,6 +14,7 @@ namespace Emarket.Infrastucture.Persistence.Contexts
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
         public DbSet<Announcement> Announcements { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<User> Users { get; set; }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
             foreach (var entry in ChangeTracker.Entries<AuditableBaseEntity>())
@@ -59,6 +60,28 @@ namespace Emarket.Infrastucture.Persistence.Contexts
             modelBuilder.Entity<Category>()
                 .Property(c => c.Description)
                 .IsRequired();
+
+            // User configuration
+
+            modelBuilder.Entity<User>().
+                Property(user => user.Name)
+                .IsRequired();
+
+            modelBuilder.Entity<User>().
+               Property(user => user.Username)
+               .IsRequired();
+
+            modelBuilder.Entity<User>().
+              Property(user => user.Password)
+              .IsRequired();
+
+            modelBuilder.Entity<User>().
+              Property(user => user.Email)
+              .IsRequired();
+
+            modelBuilder.Entity<User>().
+               Property(user => user.Phone)
+               .IsRequired();
         }
     }
 }

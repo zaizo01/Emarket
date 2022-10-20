@@ -22,3 +22,15 @@ C:\Users\czaiz\Desktop\Projects\Me\Emarket\Emarket.Core.Domain\obj\Debug\net6.0\
 C:\Users\czaiz\Desktop\Projects\Me\Emarket\Emarket.Core.Domain\obj\Debug\net6.0\refint\Emarket.Core.Domain.dll
 C:\Users\czaiz\Desktop\Projects\Me\Emarket\Emarket.Core.Domain\obj\Debug\net6.0\Emarket.Core.Domain.pdb
 C:\Users\czaiz\Desktop\Projects\Me\Emarket\Emarket.Core.Domain\obj\Debug\net6.0\ref\Emarket.Core.Domain.dll
+C:\Users\zaiz\3D Objects\Emarket\Emarket.Core.Domain\bin\Debug\net6.0\Emarket.Core.Domain.deps.json
+C:\Users\zaiz\3D Objects\Emarket\Emarket.Core.Domain\bin\Debug\net6.0\Emarket.Core.Domain.dll
+C:\Users\zaiz\3D Objects\Emarket\Emarket.Core.Domain\bin\Debug\net6.0\Emarket.Core.Domain.pdb
+C:\Users\zaiz\3D Objects\Emarket\Emarket.Core.Domain\obj\Debug\net6.0\Emarket.Core.Domain.csproj.AssemblyReference.cache
+C:\Users\zaiz\3D Objects\Emarket\Emarket.Core.Domain\obj\Debug\net6.0\Emarket.Core.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zaiz\3D Objects\Emarket\Emarket.Core.Domain\obj\Debug\net6.0\Emarket.Core.Domain.AssemblyInfoInputs.cache
+C:\Users\zaiz\3D Objects\Emarket\Emarket.Core.Domain\obj\Debug\net6.0\Emarket.Core.Domain.AssemblyInfo.cs
+C:\Users\zaiz\3D Objects\Emarket\Emarket.Core.Domain\obj\Debug\net6.0\Emarket.Core.Domain.csproj.CoreCompileInputs.cache
+C:\Users\zaiz\3D Objects\Emarket\Emarket.Core.Domain\obj\Debug\net6.0\Emarket.Core.Domain.dll
+C:\Users\zaiz\3D Objects\Emarket\Emarket.Core.Domain\obj\Debug\net6.0\refint\Emarket.Core.Domain.dll
+C:\Users\zaiz\3D Objects\Emarket\Emarket.Core.Domain\obj\Debug\net6.0\Emarket.Core.Domain.pdb
+C:\Users\zaiz\3D Objects\Emarket\Emarket.Core.Domain\obj\Debug\net6.0\ref\Emarket.Core.Domain.dll

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Emarket.Core.Application.Interfaces.Services;
 using Emarket.Core.Application.ViewModels.Announcements;
+using WebApp.Emarket.Middlewares;
 
 namespace EmarketWebApp.Controllers
 {
@@ -8,24 +9,30 @@ namespace EmarketWebApp.Controllers
     {
         private readonly IAnnouncementService _annocementService;
         private readonly ICategoryService _categoryService;
-      
+        private readonly ValidateUserSession _validateUserSession;
 
-        public AnnouncementController(IAnnouncementService announcementService, ICategoryService categoryService)
+        public AnnouncementController(IAnnouncementService announcementService, ICategoryService categoryService, ValidateUserSession validateUserSession)
         {
             _annocementService = announcementService;
             _categoryService = categoryService;
-            
+            _validateUserSession = validateUserSession;
         }
 
         public async Task<IActionResult> Index()
         {
-          
+            if (!_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
             return View(await _annocementService.GetAllViewModel());
         }
 
         public async Task<IActionResult> Create()
         {
-           
+            if (!_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
             SaveAnnouncementViewModel vm = new();
             vm.Categories = await _categoryService.GetAllViewModel();
             return View("SaveAnnouncement", vm);
@@ -34,6 +41,10 @@ namespace EmarketWebApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(SaveAnnouncementViewModel vm)
         {
+            if (!_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
             if (vm.Id == 0)
             {
                 vm.ImageUrl = UploadFile(vm.File, vm.Id);
@@ -52,6 +63,11 @@ namespace EmarketWebApp.Controllers
 
         public async Task<IActionResult> Edit(int id)
         {
+            if (!_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+
             SaveAnnouncementViewModel vm = await _annocementService.GetByIdSaveViewModel(id);
             vm.Categories = await _categoryService.GetAllViewModel();
             return View("SaveAnnouncement", vm);
@@ -60,6 +76,11 @@ namespace EmarketWebApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(SaveAnnouncementViewModel vm)
         {
+            if (!_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
+
             SaveAnnouncementViewModel productVm = await _annocementService.GetByIdSaveViewModel(vm.Id);
 
             vm.ImageUrl = UploadFile(vm.File, vm.Id, true, productVm.ImageUrl);
@@ -77,14 +98,20 @@ namespace EmarketWebApp.Controllers
 
         public async Task<IActionResult> Delete(int id)
         {
-           
+            if (!_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
             return View(await _annocementService.GetByIdSaveViewModel(id));
         }
 
         [HttpPost]
         public async Task<IActionResult> DeletePost(int id)
         {
-         
+            if (!_validateUserSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "User", action = "Index" });
+            }
             await _annocementService.Delete(id);
 
             string basePath = $"/Images/Announcements/{id}";

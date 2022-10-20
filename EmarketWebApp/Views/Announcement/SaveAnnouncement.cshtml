@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-6 offset-3">
             <div class="card">
-                <div class="card-header bg-dark text-light">
+                <div class="card-header bg-primary text-light">
                     <h4>@(editMode ? $"Editando el anuncio: {Model.Name}" : "Creando un nuevo anuncio")</h4>
                 </div>
                 <div class="card-body">
@@ -23,6 +23,12 @@
                     else
                     {
                 <form method="post" asp-controller="Announcement" asp-action="@(editMode ? "Edit":"Create")" enctype = "multipart/form-data">
+
+                    @if(editMode) {
+                        <div class="text-center">
+                            <img src="@Model.ImageUrl" style="width:300px;height:300px;" />
+                        </div>
+                    }
 
                     <div class="mb-3">
                         <label asp-for="Name" class="form-label">Nombre: </label>
@@ -47,6 +53,7 @@
                         @if (editMode)
                         {
                             <input asp-for="File" class="form-control" />
+                            
                         }
                         else
                         {

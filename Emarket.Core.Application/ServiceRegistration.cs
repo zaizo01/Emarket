@@ -17,7 +17,7 @@ namespace Emarket.Core.Application
             
             services.AddTransient<IAnnouncementService, AnnouncementService>();
             services.AddTransient<ICategoryService, CategoryService>();
-            
+            services.AddTransient<IUserService, UserService>();
         }
     }
 }

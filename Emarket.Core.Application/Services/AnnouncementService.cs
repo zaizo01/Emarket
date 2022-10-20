@@ -1,31 +1,37 @@
-﻿using Emarket.Core.Application.Interfaces.Repositories;
+﻿using Emarket.Core.Application.Helpers;
+using Emarket.Core.Application.Interfaces.Repositories;
 using Emarket.Core.Application.Interfaces.Services;
 using Emarket.Core.Application.ViewModels.Announcements;
+using Emarket.Core.Application.ViewModels.User;
 using Emarket.Core.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+
 
 namespace Emarket.Core.Application.Services
 {
     public class AnnouncementService: IAnnouncementService
     {
         private readonly IAnnouncementRepository _announcementRepository;
-        public AnnouncementService(IAnnouncementRepository announcementRepository)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly UserViewModel userViewModel;
+        public AnnouncementService(IAnnouncementRepository announcementRepository, IHttpContextAccessor httpContextAccessor)
         {
             _announcementRepository = announcementRepository;
+            _httpContextAccessor = httpContextAccessor;
+            userViewModel = _httpContextAccessor.HttpContext.Session.Get<UserViewModel>("user");
         }
 
         public async Task<SaveAnnouncementViewModel> Add(SaveAnnouncementViewModel vm)
         {
+           
+
             Announcement announcement = new();
             announcement.Name = vm.Name;
             announcement.Price = vm.Price;
             announcement.ImageUrl = vm.ImageUrl;
             announcement.Description = vm.Description;
             announcement.CategoryId = vm.CategoryId;
+            announcement.UserId = userViewModel.Id;
 
             await _announcementRepository.AddAsync(announcement);
 
@@ -49,7 +55,7 @@ namespace Emarket.Core.Application.Services
         public async Task<List<AnnouncementViewModel>> GetAllViewModel()
         {
             var announcementList = await _announcementRepository.GetAllWithIncludeAsync(new List<string> { "Category" });
-
+            
             return announcementList.Select(announcement => new AnnouncementViewModel
             {
                 Name = announcement.Name,
@@ -58,12 +64,14 @@ namespace Emarket.Core.Application.Services
                 Price = announcement.Price,
                 ImageUrl = announcement.ImageUrl,
                 CategoryName = announcement.Category.Name,
-                CategoryId = announcement.Category.Id
+                CategoryId = announcement.Category.Id,
+                UserId= announcement.UserId
             }).ToList();
         }
 
         public async Task<SaveAnnouncementViewModel> GetByIdSaveViewModel(int id)
         {
+           
             var announcement = await _announcementRepository.GetByIdAsync(id);
 
             SaveAnnouncementViewModel vm = new();
@@ -86,7 +94,7 @@ namespace Emarket.Core.Application.Services
             announcement.Price = vm.Price;
             announcement.ImageUrl = vm.ImageUrl;
             announcement.CategoryId = vm.CategoryId;
-
+           
             await _announcementRepository.UpdateAsync(announcement);
         }
     }

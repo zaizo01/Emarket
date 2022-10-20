@@ -33,5 +33,6 @@ namespace Emarket.Core.Application.ViewModels.Announcements
         [Required(ErrorMessage = "Este vaor es requerido.")]
         [DataType(DataType.Upload)]
         public IFormFile? File { get; set; }
+        public int UserId { get; set; }
     }
 }

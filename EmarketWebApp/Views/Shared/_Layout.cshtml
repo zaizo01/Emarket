@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http
+@using Emarket.Core.Application.Helpers
+@using Emarket.Core.Application.ViewModels.User
+@inject IHttpContextAccessor httpContextAccessor
+@{var User = httpContextAccessor.HttpContext.Session.Get<UserViewModel>("user");}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -29,7 +34,7 @@
                             <a class="nav-link  text-white" asp-area="" asp-controller="Category" asp-action="Index">Categorias</a>
                         </li>
                           <li class="nav-item">
-                            <a class="nav-link  text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Cerrar sesión</a>
+                            <a class="nav-link  text-white" asp-area="" asp-controller="User" asp-action="LogOut">Cerrar sesión</a>
                         </li>
                     </ul>
                 </div>

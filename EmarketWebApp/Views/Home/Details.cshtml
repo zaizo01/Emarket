@@ -1,0 +1,56 @@
+﻿@using Emarket.Core.Application.ViewModels.Announcements;
+@model SaveAnnouncementViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card">
+                <div class="card-header bg-primary text-light">
+                    <h4>Detalles del anuncio</h4>
+                </div>
+                <div class="card-body">
+
+               <div>
+                    <hr />
+                    <dl class="row">
+                        <dt class = "col-sm-2">
+                            Nombre
+                        </dt>
+                        <dd class = "col-sm-10">
+                            @Html.DisplayFor(model => model.Name)
+                        </dd>
+                        <dt class = "col-sm-2">
+                            Precio
+                        </dt>
+                        <dd class = "col-sm-10">
+                            @Html.DisplayFor(model => model.Price)
+                        </dd>
+                         <dt class = "col-sm-2">
+                            Descripción
+                        </dt>
+                        <dd class = "col-sm-10">
+                            @Html.DisplayFor(model => model.Description)
+                        </dd>
+                         <dt class = "col-sm-2">
+                            Categoría 
+                        </dt>
+                       
+                    </dl>
+                </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
